@@ -1,10 +1,16 @@
-import Link from "next/link"
-import Links from "./links"
+import { ROUTES } from "@/utils";
+import NavLinkItem from "./links";
+import styles from './navbar.module.css';
+
 
 const Navbar = () => {
-    return <div>
-        <Link href="/" className="logo">Logo</Link>
-        <Links />
-    </div>
+
+    return (
+        <div className={styles.navbar}>
+            {ROUTES.map((link) => (
+                <NavLinkItem item={link} key={link.title} />
+            ))}
+        </div>
+    );
 }
 export default Navbar

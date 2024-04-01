@@ -1,24 +1,19 @@
-import { ROUTES } from "@/utils";
-import NavLinkItem from "./navLink";
+"use client";
+import Link from "next/link";
+import { type IRoute } from "@/utils";
+import { usePathname } from "next/navigation";
+import styles from "./navLink.module.css";
 
-const Links = () => {
-    const session = true;
-    const isAdmin = false;
-
+const NavLinkItem = ({ item }: { item: IRoute }) => {
+    const pathName = usePathname();
     return (
-        <div>
-            {ROUTES.map((link) => (
-                <NavLinkItem item={link} key={link.title} />
-            ))}
-            {session ? (
-                <>
-                    {isAdmin && <NavLinkItem item={{ title: "Admin", path: "/admin" }} />}
-                    <button>Logout</button>
-                </>
-            ) : (
-                <NavLinkItem item={{ title: "Login", path: "/login" }} />
-            )}
-        </div>
+        <Link
+            href={item.path}
+            className={pathName === item.title ? styles.active : ""}
+        >
+            {item.title}
+        </Link>
     );
 };
-export default Links;
+
+export default NavLinkItem;
