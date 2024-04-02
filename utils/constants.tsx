@@ -19,5 +19,9 @@ export const ROUTES: IRoute[] = [
     {
         title: 'Contact',
         path: '/contact'
+    },
+    {
+        title: 'test',
+        path: '/test'
     }
 ]
