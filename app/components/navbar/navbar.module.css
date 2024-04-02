@@ -1,0 +1,9 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    min-width: 100px;
+    background-color: antiquewhite;
+    position: absolute;
+    height: calc(100% - 180px);
+}
