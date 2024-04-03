@@ -55,8 +55,9 @@ export interface IPostItem {
     subject: ISubject;
     description: string;
     thumbnail: string;
-    reader: number;
+    viewer: number;
     rating: number;
     comments: IComment[];
     owner: IUser;
+    projectUrl?: string;
 }
