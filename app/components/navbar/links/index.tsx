@@ -13,7 +13,7 @@ const NavLinkItem = ({ item }: { item: IRoute }) => {
     <Link
       href={item.path}
       className={clsx(
-        "flex items-center align-middle lg:pl-3 sm:px-3 m-1",
+        "flex items-center justify-center lg:pl-3 sm:px-3 m-1",
         pathName === item.title ? styles.active : ""
       )}
     >
