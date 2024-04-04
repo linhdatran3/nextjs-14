@@ -23,7 +23,9 @@ export default function RootLayout({
         <Header />
         <div className="main-layout">
           <Navbar />
-          <div className="pl-[50px] lg:pl-[200px] w-full">{children}</div>
+          <div className="pl-[50px] md:pl-[200px] lg:pl-[200px] w-full">
+            {children}
+          </div>
         </div>
         <Footer />
       </body>
