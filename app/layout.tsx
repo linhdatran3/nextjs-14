@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer, Header, Navbar } from "./components";
 import React from "react";
+import { clsx } from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
         <Header />
         <div className="main-layout">
           <Navbar />
-          <div className="container">{children}</div>
+          <div className="pl-[50px] lg:pl-[200px] w-full">{children}</div>
         </div>
         <Footer />
       </body>

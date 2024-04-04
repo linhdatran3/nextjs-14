@@ -3,11 +3,11 @@
 import { ROUTES } from "@/utils";
 import NavLinkItem from "./links";
 import styles from "./navbar.module.css";
-import { useState } from "react";
+import { clsx } from "clsx";
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
+    <div className={clsx(styles.navbar, "w-[50px] lg:w-[200px]")}>
       {ROUTES.map((link) => (
         <NavLinkItem item={link} key={link.title} />
       ))}
